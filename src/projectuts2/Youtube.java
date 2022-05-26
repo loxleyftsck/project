@@ -6,6 +6,7 @@ abstract public class Youtube implements Berdduit, Bernonton {
     protected double subscriber;
     protected double menonton;
     protected double likes;
+    private DailyMotion dm;
     private DailyMotion[] dailymotion;
 
     public Youtube(String namaChannel, double subscriber, double menonton, double likes) {
@@ -16,7 +17,8 @@ abstract public class Youtube implements Berdduit, Bernonton {
     }
 
     public Youtube() {
-        this("", 0, 0, 0);
+        this.DailyMotion = new DailyMotion[];
+        this.jumlahPegawai=0;
     }
 
     public void setNamaChannel(String namaChannel) {
@@ -51,8 +53,22 @@ abstract public class Youtube implements Berdduit, Bernonton {
         this.likes = likes;
     }
 
-    
+    public DailyMotion getDm() {
+        return dm;
+    }
 
+    public void setDm(DailyMotion dm) {
+        this.dm = dm;
+    }
+
+    public DailyMotion[] getDailymotion() {
+        return dailymotion;
+    }
+
+    public void setDailymotion(DailyMotion[] dailymotion) {
+        this.dailymotion = dailymotion;
+    }
+    
     public String toString() {
         return "NAMA CHANNEL : " + namaChannel + ",  " + "SUBSCRIBER : " + subscriber + ",  " + "TOTAL PENONTON : " + getMenonton();
     }
