@@ -9,13 +9,7 @@ package projectuts;
  *
  * @author adili
  */
-public class PROJECTUTS {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public interface TotalPembayaran {
     
+    public double getTotalPembayaran();
 }
