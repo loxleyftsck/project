@@ -6,6 +6,7 @@ abstract public class Youtube implements Berdduit, Bernonton {
     protected double subscriber;
     protected double menonton;
     protected double likes;
+    private DailyMotion[] dailymotion;
 
     public Youtube(String namaChannel, double subscriber, double menonton, double likes) {
         this.namaChannel = namaChannel;
@@ -49,6 +50,8 @@ abstract public class Youtube implements Berdduit, Bernonton {
     public void setLikes(double likes) {
         this.likes = likes;
     }
+
+    
 
     public String toString() {
         return "NAMA CHANNEL : " + namaChannel + ",  " + "SUBSCRIBER : " + subscriber + ",  " + "TOTAL PENONTON : " + getMenonton();

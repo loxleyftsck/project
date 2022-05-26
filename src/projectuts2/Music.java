@@ -1,14 +1,14 @@
 package projectuts2;
-public class MNET extends Youtube {
+public class Music extends Youtube {
     
     public final int SEKALI_NONTON = 245;
     public int user;
     
-    public MNET(String namaChannel, double subscriber, double menonton, double likes) {
+    public Music(String namaChannel, double subscriber, double menonton, double likes) {
         super(namaChannel, subscriber, menonton, likes);
     }
     
-    public MNET() {
+    public Music() {
         super("",0,0, 0);
     }
 

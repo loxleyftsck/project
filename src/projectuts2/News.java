@@ -1,15 +1,15 @@
 package projectuts2;
-public class Pewdiepie extends Youtube {
+public class News extends Youtube {
     
-    public final int SEKALI_NONTON = 245;
+    public final double SEKALI_NONTON = 245;
     public int user;
     
-    public Pewdiepie(String namaChannel, double subscriber, double menonton, double likes) {
+    public News(String namaChannel, double subscriber, double menonton, double likes) {
         super(namaChannel, subscriber, menonton, likes);
     }
     
-    public Pewdiepie() {
-        super("",0,0, 0);
+    public News() {
+        super("",0,0,0);
     }
 
     public double getUser() {
