@@ -1,14 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projectuts;
 
-/**
- *
- * @author adili
- */
-public class NasiPadang {
+public class NasiPadang extends Foodcourt {
+    public final int PAJAK_PERMEJA = 7000;
+
+    public NasiPadang(String nama, String noMeja, int totalBayar) {
+        super(nama, noMeja, totalBayar);
+    }
     
+    public NasiPadang() {
+        super("","",0);
+    }
+
+    @Override
+    public double getTotalPembayaran() {
+        return totalBayar + PAJAK_PERMEJA;
+    }
 }
