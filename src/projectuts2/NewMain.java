@@ -3,48 +3,47 @@ package projectuts2;
 public class NewMain {
 
     public static void main(String[] args) {
-        Youtube[] ytb = new Youtube[5];
+        videoplayer vp = new videoplayer();
+        Youtube[] ytb = new Youtube[vp.MAX_USER];
+        int jumlhUser= 0;
         
-        News nw = new News("Metro TV", 5110000, 3000000, 3000000);
-        nw.setLikes(1);
-        nw.setSubscriber(1);
-        ytb[0] = nw;
+        News nw = new News("Metro TV", 51100, 30000, 40000);
+        nw.setUser(2);
+        ytb[jumlhUser++] = nw;
         
-        nw = new News("Barudak", 2100000, 30000040, 30000300);
-        nw.setLikes(1);
-        nw.setSubscriber(1);
-        ytb[1] = nw;
+        nw = new News("Barudak", 21000, 30040, 4000);
+        nw.setUser(2);
+        ytb[jumlhUser++] = nw;
         
-        nw = new News("mmk", 1343242, 534515, 132414);
-        nw.setLikes(1);
-        nw.setSubscriber(1);
-        ytb[2] = nw;
+        nw = new News("mmk", 13242, 5311, 900);
+        nw.setUser(2);
+        ytb[jumlhUser++] = nw;
         
-        Music mc = new Music("Hybe", 5250020, 3532000, 30054200);
-        nw.setLikes(1);
-        nw.setSubscriber(1);
-        ytb[3] = mc;
+        Music mc = new Music("Hybe", 52500, 35320, 21000);
+        mc.setUser(2);
+        ytb[jumlhUser++] = mc;
         
-        mc = new Music("SMTOWN", 51105000, 60500000, 6007300);
-        nw.setLikes(1);
-        nw.setSubscriber(1);
-        ytb[4] = mc;
+        mc = new Music("SMTOWN", 51100, 60073, 30000);
+        mc.setUser(1);
+        ytb[jumlhUser++] = mc;
         
-        System.out.println("Daftar Pegawai: ");
-        System.out.println("Manager: ");
+        vp.setYtb(ytb, jumlhUser);
+      
+        System.out.println("Daftar Channel Sesuai kategori: ");
+        System.out.println("News: ");
         for (int m = 0; m < ytb.length; m++) {
-            if(pgw[m] instanceof News) {
-                System.out.println("nip: " + ytb[m].getNip() + ", " + "nama: " + ytb[m].getNama() + ", " + "dengan gaji total: " + ytb[m].getGajiTotal();
+            if(ytb[m] instanceof News) {
+                System.out.print("Nama Channel: " + ytb[m].getNamaChannel() + " " + "Subscriber: " + ytb[m].getSubscribe() + ", "+ "Watch : " + ytb[m].getWatch() + ", " + "Like :" +ytb[m].getLikes() + " ," + Dengan penghasilan: " + ytb[m].getMonetise();
                 System.out.println("");
             }
         }
-        System.out.println("Serketaris");
+        System.out.println("Music: ");
         for (int m = 0; m < ytb.length; m++) {
-            if (pgw[m] instanceof Music) {
-                System.out.println("nip: " + ytb[m].getSubscriber()+ ", " + "nama: " + ytb[m].getLikes()+ ", " + "dengan gaji total: " + ytb[m].());
-                System.out.println("");
+            if (ytb[m] instanceof Music) {
+                System.out.println("Nama Channel: " + ytb[m].getSubscriber()+ ", " + "Subscriber: " + ytb[m].getSubscribe()+ ", " + ""+"dengan gaji total: " + ytb[m].getMonetise());
+                System.out.println("");              
             }
         } 
-
+        
 }
     }

@@ -4,15 +4,15 @@ public class Music extends Youtube {
     public final int SEKALI_NONTON = 245;
     public int user;
     
-    public Music(String namaChannel, double subscriber, double menonton, double likes) {
-        super(namaChannel, subscriber, menonton, likes);
+    public Music(String namaChannel, int subscriber, int watch,int likes) {
+        super(namaChannel, subscriber, watch, likes);
     }
     
     public Music() {
-        super("",0,0, 0);
+        super("",0,0,0);
     }
 
-    public double getUser() {
+    public int getUser() {
         return user;
     }
 
@@ -21,17 +21,19 @@ public class Music extends Youtube {
     }
     
     @Override
-    public double getSubscribe() {
-        return user + subscriber;
+    public int getSubscribe() {
+        subscriber = user + subscriber;
+        return subscriber;
     }
     
-    @Override
-    public double getLike() {
+    @Override 
+    public int getLike() {
         return user + likes;
     }
 
+
     @Override
     public double getMonetise() {
-        return menonton * SEKALI_NONTON;
+        return watch * SEKALI_NONTON;
     }
 }

@@ -11,6 +11,6 @@ package projectuts2;
  */
 public interface Bernonton {
     
-    public double getSubscribe();
-    public double getLike();
+    public int getSubscribe();
+    public int getLike();
 }

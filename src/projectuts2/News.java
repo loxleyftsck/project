@@ -1,37 +1,38 @@
 package projectuts2;
+
 public class News extends Youtube {
-    
+
     public final double SEKALI_NONTON = 245;
     public int user;
-    
-    public News(String namaChannel, double subscriber, double menonton, double likes) {
-        super(namaChannel, subscriber, menonton, likes);
-    }
-    
-    public News() {
-        super("",0,0,0);
+
+    public News(String namaChannel, int subscriber, int watch, int likes) {
+        super(namaChannel, subscriber, watch, likes);
     }
 
-    public double getUser() {
+    public News() {
+        super("", 0, 0, 0);
+    }
+
+    public int getUser() {
         return user;
     }
 
     public void setUser(int user) {
         this.user = user;
     }
-    
+
     @Override
-    public double getSubscribe() {
+    public int getSubscribe() {
         return user + subscriber;
     }
-    
+
     @Override
-    public double getLike() {
+    public int getLike() {
         return user + likes;
     }
 
     @Override
     public double getMonetise() {
-        return menonton * SEKALI_NONTON;
+        return watch * SEKALI_NONTON;
     }
 }
