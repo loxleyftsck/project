@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projectuts2;
+package nyobagan;
 
 /**
  *
  * @author adili
  */
-public interface Bernonton {
-    
-    public int getSubscribe();
-    public int getLike();
+public interface TopUp {
+    public int getTopUp();
 }

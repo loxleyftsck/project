@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projectuts2;
+package nyobagan;
 
 /**
  *
  * @author adili
  */
-public interface Berdduit {
-    
-    public double getMonetise();
+public interface limit {
+    public int getLimit();
 }
